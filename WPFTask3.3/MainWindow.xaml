@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="Задача 3.3" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" Name="panel">
+            <RadioButton Content="VisualBrush" Name="VisualCheckBox" Click="VisualCheckBox_Checked" />
+            <RadioButton Content="LinearGradientBrush" Name="LinearCheckBox" Click="LinearCheckBox_Checked" />
+            <RadioButton Content="RadialGradientBrush" Name="RadialCheckBox" Click="RadialCheckBox_Checked" />
+            <RadioButton Content="ImageBrush" Name="ImageCheckBox" Click="ImageCheckBox_Checked" />
+        </StackPanel>
+
+        <Rectangle Grid.Column="1" Width="200" Height="200" Fill="Blue" Name="PaintBox"/>
     </Grid>
 </Window>

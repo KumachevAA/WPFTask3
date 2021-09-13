@@ -24,5 +24,25 @@ namespace WPFTask3._3
         {
             InitializeComponent();
         }
+
+        private void VisualCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            PaintBox.Fill = new VisualBrush(panel);
+        }
+
+        private void LinearCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            PaintBox.Fill = new LinearGradientBrush(Colors.Black, Colors.White, 0);
+        }
+
+        private void RadialCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            PaintBox.Fill = new RadialGradientBrush(Colors.Black, Colors.White);
+        }
+
+        private void ImageCheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            PaintBox.Fill = new ImageBrush(new BitmapImage(new Uri(@"https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png")));
+        }
     }
 }
