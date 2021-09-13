@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPFTask3._3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTask3._3"
+        mc:Ignorable="d"
+        Title="Задача 3.3" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" VerticalAlignment="Center" Name="panel">
+            <RadioButton Content="VisualBrush" Name="VisualCheckBox" Click="VisualCheckBox_Checked" />
+            <RadioButton Content="LinearGradientBrush" Name="LinearCheckBox" Click="LinearCheckBox_Checked" />
+            <RadioButton Content="RadialGradientBrush" Name="RadialCheckBox" Click="RadialCheckBox_Checked" />
+            <RadioButton Content="ImageBrush" Name="ImageCheckBox" Click="ImageCheckBox_Checked" />
+        </StackPanel>
+
+        <Rectangle Grid.Column="1" Width="200" Height="200" Fill="Blue" Name="PaintBox"/>
+    </Grid>
+</Window>
